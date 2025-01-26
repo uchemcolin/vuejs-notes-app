@@ -1,0 +1,311 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f3ec78, #af4261);
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+  
+h1, h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+  
+p {
+    font-size: 1.2rem;
+    /*color: #f7f7f7;*/
+    text-align: center;
+    line-height: 1.5;
+}
+  
+/* Navbar */
+.navbar {
+    background: #333;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Make navbar responsive on smaller screens */
+}
+  
+.logo {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+}
+  
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap; /* Allow navbar items to wrap on smaller screens */
+    padding: 0;
+}
+  
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+  
+.nav-link:hover {
+    color: #f3ec78;
+}
+  
+/* Pages */
+.page {
+    padding: 2rem;
+    text-align: center;
+}
+  
+/* Add Note - Form */
+.note-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 auto;
+    max-width: 600px; /* Ensure form doesn't stretch too wide */
+}
+  
+.form-input {
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+  
+.btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #f3ec78;
+    color: #333;
+    transition: transform 0.3s;
+}
+  
+.btn-primary:hover {
+    transform: scale(1.05);
+    background: #af4261;
+    color: #fff;
+}
+  
+/* Notes List - Center and Responsive */
+.notes-list {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 1.5rem; /* Add space between notes */
+    margin: 0 auto; /* Center the container */
+    padding: 2rem 1rem; /* Add padding around the content */
+    max-width: 100%; /* Ensure responsiveness */
+}
+  
+/* Note Card Styling */
+.note-card {
+    background: #fff;
+    padding: 2rem; /* Spacious padding for better aesthetics */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Full width of the parent container */
+    max-width: 600px; /* Limit maximum width */
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+  
+.note-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhance hover effect */
+}
+  
+/* View Single Note Page Styles */
+.view-note .note-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+  
+.note-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+  
+.note-date {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+  
+.note-content {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+  
+.note-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+  
+/* Button Styles - Secondary and Danger */
+.btn-secondary {
+    background: #f3ec78;
+    color: #333;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s, background 0.3s;
+}
+  
+.btn-secondary:hover {
+    transform: scale(1.05);
+    background: #af4261;
+    color: #fff;
+}
+  
+.btn-danger {
+    background: #ff5252;
+    color: #fff;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+  
+.btn-danger:hover {
+    transform: scale(1.05);
+    background: #d32f2f;
+}
+
+/* NotFound Page Styling */
+.page.not-found {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.page.not-found h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #f3ec78;
+    margin-bottom: 1rem;
+}
+
+.page.not-found p {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.page.not-found .btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background: #af4261;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.page.not-found .btn:hover {
+    background: #f3ec78;
+    color: #333;
+    transform: scale(1.05);
+}
+  
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 1rem 1.5rem;
+    }
+
+    .nav-links {
+        justify-content: center; /* Center links on larger tablets */
+    }
+
+    .note-form {
+        max-width: 80%;
+    }
+
+    .note-card {
+        padding: 1.5rem; /* Slightly reduce padding on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .notes-list {
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .note-card {
+        padding: 1.5rem; /* Slightly reduce padding on smaller devices */
+    }
+
+    .note-form {
+        max-width: 90%;
+    }
+
+    .form-input {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack navbar items on smaller screens */
+        text-align: center;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .note-card {
+        padding: 1rem; /* Further reduce padding for very small screens */
+    }
+
+    .note-form {
+        max-width: 95%;
+    }
+
+    .form-input {
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack navbar items */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack navbar items */
+        gap: 0.5rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+}
+  
